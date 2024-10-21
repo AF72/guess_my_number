@@ -1,6 +1,6 @@
 'use strict';
 
-//Define the secrete number
+//Define the secrete number and the smax score
 const secretNumber = Math.trunc(Math.random() * 20 + 1);
 let score = 20;
 console.log(secretNumber);
