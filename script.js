@@ -5,6 +5,9 @@ const secretNumber = Math.trunc(Math.random() * 20 + 1);
 let score = 20;
 console.log(secretNumber);
 
+//Function for guess > secretNumber or guess < secretNumber
+function testGuess(params) {}
+
 //The next peace of code check the logic of the game
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -13,6 +16,7 @@ document.querySelector('.check').addEventListener('click', function () {
       '❓ Yuo need to write a number between 1 and 20 ❓';
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'Correcto Number...👍';
+    document.querySelector('.number').textContent = secretNumber;
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'Number Too High!';
