@@ -115,8 +115,14 @@ h1 {
 .message {
   margin-bottom: 8rem;
   height: 3rem;
+  font-size: larger;
 }
 
 .label-score {
   margin-bottom: 2rem;
+  font-size: larger;
+}
+
+.label-highscore {
+  font-size: larger;
 }
