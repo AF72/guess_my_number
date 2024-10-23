@@ -16,7 +16,8 @@ function testGuess(params) {
 //The next peace of code check the logic of the game
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
-  if (!guess) {
+  document.querySelector('body').style.backgroundColor = '#545454';
+  if (!guess || guess > 20) {
     document.querySelector('.message').textContent =
       '❓ Yuo need to write a number between 1 and 20 ❓';
     document.querySelector('body').style.backgroundColor = 'rgb(123, 96, 96)';
@@ -34,6 +35,7 @@ document.querySelector('.check').addEventListener('click', function () {
   if (score === 0) {
     document.querySelector('.message').textContent = 'You lost the game!😘';
     document.querySelector('.score').textContent = 0;
+    document.querySelector('body').style.backgroundColor = 'rgb(123, 96, 96)';
   }
 });
 
