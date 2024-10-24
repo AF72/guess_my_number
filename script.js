@@ -3,6 +3,7 @@
 //Define the secrete number and the max score
 let secretNumber = Math.trunc(Math.random() * 20 + 1);
 let score = 20;
+let highScore = 0;
 console.log(secretNumber);
 
 //Function for guess > secretNumber or guess < secretNumber
@@ -27,6 +28,12 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('body').style.backgroundColor = '#60b347'; //Turn the background color to green
     document.querySelector('.number').style.width = '30rem'; //Increase the font size
+    console.log(score);
+    console.log(highScore);
+    if (score > highScore) {
+      document.querySelector('.highscore').textContent = score;
+      highScore = score;
+    }
   } else if (guess !== secretNumber) {
     //when guess is to high or to low
     const number = guess > secretNumber ? true : false;
